@@ -1,0 +1,8 @@
+Terminal Commands used to import data into tables:
+
+LOAD DATA LOCAL INFILE '/Desktop/Nasa/Names_Data.csv'
+INTO TABLE Names
+FIELDS TERMINATED BY ',' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
