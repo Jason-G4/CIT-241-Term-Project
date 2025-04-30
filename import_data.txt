@@ -1,8 +1,16 @@
 Terminal Commands used to import data into tables:
 
-LOAD DATA LOCAL INFILE '/Desktop/Nasa/Names_Data.csv'
-INTO TABLE Names
-FIELDS TERMINATED BY ',' 
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
+/Names Table
+load data local infile '/Users/jasong/Downloads/Names_Data.csv' into table Names fields terminated by ',' lines terminated by '\n' ignore 1 rows (pl_name,hostname,pl_letter,hd_name); 
+
+/PlanetDiscovery Table
+load data local infile '/Users/jasong/Downloads/PlanentDis_Data.csv' into table PlanetDiscovery fields terminated by ',' lines terminated by '\n' ignore 1 rows (pl_name,pl_letter,discoverymethod,disc_year,disc_facility); 
+
+/PlanetParameters Table
+load data local infile '/Users/jasong/Downloads/PlanetPara_Data.csv' into table PlanetParameters fields terminated by ',' lines terminated by '\n' ignore 1 rows (pl_name,pl_letter,pl_refname,pl_orbper,pl_radius,pl_mass); 
+
+/StellarData Table
+load data local infile '/Users/jasong/Downloads/StellarData_Data.csv' into table StellarData fields terminated by ',' lines terminated by '\n' ignore 1 rows (hostname,st_refname,st_spectype,st_temp,st_rad,st_mass); 
+
+/SystemComposition Table
+load data local infile '/Users/jasong/Downloads/SystemComp_Data.csv' into table SystemComposition fields terminated by ',' lines terminated by '\n' ignore 1 rows (hostname,sy_starnum,sy_planentnum,sy_moonnum); 
